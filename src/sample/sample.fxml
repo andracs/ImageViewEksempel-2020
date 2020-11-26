@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Billeder">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="indlæsKnap" layoutX="24.0" layoutY="134.0" mnemonicParsing="false" onAction="#visBillede" text="Indlæs et billede" />
+                  <TextField fx:id="filnavnTextField" layoutX="19.0" layoutY="88.0" />
+                  <ImageView fx:id="fotoImageView" fitHeight="286.0" fitWidth="338.0" layoutX="225.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+                   <ChoiceBox fx:id="billederChoiceBox" layoutX="24.0" layoutY="32.0" prefWidth="150.0" value="drinks">
+                       <items>
+                           <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="drinks" />
+                               <String fx:value="hest" />
+                               <String fx:value="hund" />
+                               <String fx:value="kat" />
+                               <String fx:value="komondor" />
+                               <String fx:value="komondor2" />
+                               <String fx:value="mangalica" />
+                               <String fx:value="puli" />
+                           </FXCollections>
+                       </items>
+                   </ChoiceBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Videoer">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="14.0" text="Her kommer en videovælger..." />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
